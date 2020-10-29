@@ -4,23 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Unit 2 Labs</title>
+    <style>
+        #libraryOutput {
+            display: none;
+        }
+        
+        #pizzaOutput {
+            display: none;
+        }
+        
+        #clickOutput {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Library -->
     <h1>Library</h1>
-    <button onclick="calculateLibrary()">Calculate</button>
 
+    <label for="numLateBooks">Enter the amount of late books you have</label>
+    <br>
+    <input type="number" id="numLateBooks">
+    <br><br>
+
+    <label for="numLateDvds">Enter the amount of late DVDs you have</label>
+    <br>
+    <input type="number" id="numLateDvds">
+    <br><br>
+
+    <label for="numDaysLate">Enter the amount of days late your items are</label>
+    <br>
+    <input type="number" id="numDaysLate">
+    <br><br>
+
+    <button id="calculateLibraryButton">Calculate</button>
+
+    <p id="libraryOutput">You owe the Library a total of $<span id="totalLateFee"></span>. <span id="numLateBooks"></span> books are late by <span class="numDaysLate"></span>, costing $<span id="userBookLateFee"></span>.<span id="numLateDvds"></span> dvds are late by
+        <span class="numDaysLate"></span>, costing $<span id="userDvdLateFee"></span>.
+    </p>
+
+    <!-- Pizza -->
     <h1>Pizza</h1>
-    <button onclick="calculatePizza()">Calculate</button>
 
+    <label for="numCoworkers">Enter the number of coworkers ordering pizza</label>
+    <br>
+    <input type="number" id="numCoworkers">
+    <br><br>
+
+    <label for="numCheesePizzas">Enter number of Pizzas</label>
+    <br>
+    <input type="number" id="numCheesePizzas">
+    <br><br>
+
+    <label for="numPizzaToppings">Enter the total number of toppings you would like to add (across all pizzas if applicable)</label>
+    <br>
+    <input type="number" id="numPizzaToppings">
+    <br><br>
+
+    <button id="calculatePizzaButton">Calculate</button>
+
+    <p id="pizzaOutput">You split <span id="numCheesePizzasOutput"></span> cheese pizzas between <span id="numCoworkersOutput"></span> coworker(s) with <span id="numPizzaToppingsOutput"></span> topping(s). The total is $<span id="totalCostOutput"></span>. Individually, it
+        would cost $<span id="individualCostOutput"></span>.</p>
+
+    <!-- Click tracker -->
     <h1>Click Tracker</h1>
-    <button onclick="addNum()">Increment clicks</button>
-    <button onclick="alertUser()">How many clicks?</button>
+    <button id="incrementClickButton">Increment clicks</button>
+    <button id="outputClickButton">How many clicks?</button>
+    <button id="incrementAndOutputButton">Increment clicks and output</button>
+    <p id="clickOutput">You clicked <span id="clickNum"></span> times.</p>
 
+    <!-- Output -->
 
-    <script type="text/javascript" src="library.js"></script>
-    <script type="text/javascript" src="pizza.js"></script>
-    <script type="text/javascript" src="click.js"></script>
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+
 </body>
 
 </html>
